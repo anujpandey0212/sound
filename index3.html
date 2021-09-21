@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas></canvas>
+    <svg></svg>
+    <div id="demo"></div>
+</body>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+    var audioContext=new AudioContext();
+    var oscilator=audioContext.createOscillator();
+    oscilator.connect(audioContext.destination);
+    // oscilator.start();
+    setTimeout(function(){
+        oscilator.stop();
+    },2000);
+    var svg=d3.select("#demo")
+                .append('svg')
+                .attr("width", this.width + this.margin.left + this.margin.right)
+				.attr("height", this.height + this.margin.top + this.margin.bottom)
+				.append("g")
+</script>
+</html>
