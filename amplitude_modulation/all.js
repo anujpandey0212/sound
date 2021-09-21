@@ -615,7 +615,7 @@ function Demo(settings) {
       }).on("change",(ev)=>{
         this.ui.f1.value = ev.value
         this.sendEvent(this.ui.f1.title, 'value changed', window.location.pathname);
-        this.update(prop);
+        this.update("f1");
       });
 
       tool.addInput(params,'f2',{
@@ -624,7 +624,7 @@ function Demo(settings) {
       }).on("change",(ev)=>{
         this.ui.f2.value = ev.value
         this.sendEvent(this.ui.f2.title, 'value changed', window.location.pathname);
-        this.update(prop);
+        this.update("f2");
       });
 
       tool.addInput(params,"amplitude",{
@@ -633,7 +633,7 @@ function Demo(settings) {
       }).on("change",(ev)=>{
         this.ui.amplitude2.value = ev.value;
         this.sendEvent(this.ui.amplitude2.title, 'value changed', window.location.pathname);
-        this.update(prop);
+        this.update("amplitude2");
       });
 
       tool.addInput(params,"zoom",{
@@ -658,7 +658,7 @@ function Demo(settings) {
       tool.addInput(params,"sound").on("change",(ev)=>{
         this.ui.sound.value = ev.value;
         this.sendEvent(this.ui.sound.title, 'value changed', window.location.pathname);
-        this.update(prop);
+        this.update("sound");
       });
 
       tool.addInput(params,"overlay").on("change",(ev)=>{
