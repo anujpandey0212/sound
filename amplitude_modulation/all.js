@@ -652,7 +652,7 @@ function Demo(settings) {
         }
         
         // this.sendEvent(this.ui.zoom.title, 'value changed', window.location.pathname);
-        this.update(prop);
+        this.update("zoom");
       });
 
       tool.addInput(params,"sound").on("change",(ev)=>{
@@ -664,7 +664,7 @@ function Demo(settings) {
       tool.addInput(params,"overlay").on("change",(ev)=>{
         this.ui.overlay.value = ev.value;
         this.sendEvent(this.ui.overlay.title, 'value changed', window.location.pathname);
-        this.update(prop);
+        this.update("overlay");
       });
 
       tool.addInput(params,"background").on("change",(ev)=>{
