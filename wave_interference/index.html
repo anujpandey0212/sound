@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css" class='demo-specific-styles'>
+        .grid-background {
+          fill: #ddd;
+        }
+        .grid line, .axis line {
+          stroke: #333;
+          stroke-opacity: .15;
+        }
+        .grid .minor line {
+          stroke-opacity: .15;
+        }
+        .grid text {
+          display: none;
+        }
+        .axis line {
+          stroke: #000;
+        }
+        .axis path,
+        .grid path {
+          display: none;
+        }
+        .axis text { 
+            font-size: 13px;
+        }
+                        </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo" class="">
+    </div>
+    <div class="clearfix" id='ui-container'>
+    </div>
+    <div class="demo-description">
+        <svg></svg>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+<script src="./all.js"></script>
+<script src="./d3.v3.min.js"></script>
+<script src="./demo.js"></script>
+</html>
