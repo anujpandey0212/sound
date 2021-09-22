@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<title>Quality of Sound Html5 Simulation</title>
+<style>
+	   body {background:white;color:black;}
+	    .ff{font-weight:normal;font-family:Arial,Helvetica,"Times New Roman","Noto Sans Condensed",
+           "DejaVu Sans Condensed",sans-serif;}	
+		   td{height:16px;}       
+	   a:link{color:DarkBlue;} a:visited{color:blue;} a:hover{color:red;}
+	   p.ps{margin:0px;padding:0px;font-size:14px;color:DarkSlateGray;}
+	   nav{font-size:16px;}	   
+</style>
+
+ 
+</head>
+
+<body class="ff">
+<input type="button" id = "Play0" class="ff" style="font-size:30px;z-index:5;color:white;background:red;position:absolute;" onclick="playW()" value="Hear">
+<input type="button" id = "Play1" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(1)" value="Hear">
+<input type="button" id = "Play2" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(2)" value="Hear">
+<input type="button" id = "Play3" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(3)" value="Hear">
+<input type="button" id = "Play4" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(4)" value="Hear">
+<input type="button" id = "Play5" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(5)" value="Hear">
+<input type="button" id = "Play6" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(6)" value="Hear">
+<input type="button" id = "Play7" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(7)" value="Hear">
+<input type="button" id = "Play8" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(8)" value="Hear">
+<input type="button" id = "Play9" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(9)" value="Hear">
+<input type="button" id = "Play10" class="ff" style="font-size:16px;z-index:5;color:white;background:blue;position:absolute;" onclick="playH(10)" value="Hear">
+
+<select id="fundamentalFreq" class="ff" style="font-size:14px;z-index:5;color:red;background:white;position:absolute;" onchange="fundFreq();">
+	<option>Fundamental frequency</option>
+	<option>  do (262 Hz)</option>
+    <option>  re (294 Hz)</option>
+	<option>  mi (329 Hz)</option>	
+    <option>  fa (349 Hz)</option>
+	<option>  so (392 Hz)</option>	
+	
+	
+</select>
+
+<div id ="myDIV">
+<canvas id = "timbre" width = "1200" height = "1000" style="z-index:1;position:absolute;left:10px;top:30px;margin:0px;border:5px solid white;padding:1px;"> 
+Your browser does not support the canvas tag.
+</canvas>
+</div>
+<table style="text-align:center;z-index:1;position:absolute;left:132px;top:1150px;width: 637px; height: 312px;" >
+    <tr> 
+      <td> 
+        <p style = "font-size:large;">Quality of Sound</p>
+      </td>
+    </tr>
+    <tr> 
+      <td>&nbsp;</td>
+    </tr>
+    <!-- <tr> 
+      <td> 
+        <div style = "text-align:left;"> 
+          <table style = "width:645px;text-align:left;">
+            <tr> 
+              <td><p class = "ps">Author and copyright holder: </p></td>
+              <td><p class = "ps">Chiu-king Ng </p></td>
+            </tr>
+            <tr> 
+              <td><p class = "ps">Feedback/Contact:</p>
+              </td>
+              <td><p class = "ps">feedbackXY@phy.hk 
+                where XY is the prime number following 23 </p></td>
+            </tr>
+             <tr> 
+              <td><p class = "ps"> Mirror Site:</p></td>
+              <td><p class = "ps"> <a href="http://phy.hk"> 
+                http://phy.hk</a></p></td>
+            </tr> 
+            <tr> 
+              <td><p class = "ps">Last Update:</p></td>
+              <td><p class = "ps">2019-9-15</p></td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+       <tr> <td>&nbsp;</td></tr>			
+       <tr> <td>&nbsp;</td></tr> 	
+        <tr> 
+           <td> 
+		    <div style = "text-align:center;"><img src="../../../images/BB4.jpg" alt="separator" width="700" height="15"></div>
+		   </td>	
+        </tr>
+		
+       <tr> <td>&nbsp;</td></tr>			
+       <tr> <td>&nbsp;</td></tr>  
+	<tr>
+      <td> 
+            <nav> 		  
+		          <a href="../../../index.htm"> Front Page</a> ■□■□■ 
+				  <a href="../../../englishVersion.htm"> Java Simulations</a> ■□■□■ 
+                  <a href="../../../index.htm#HS"> Html5 Simulations </a>
+            </nav>       
+	  </td>
+	</tr> 
+	   <tr> <td>&nbsp;</td></tr>			
+       <tr> <td>&nbsp;</td></tr> 
+  </table> -->
+
+</body>
+<script src = "./slider.js"></script>
+<script src = "./timbre.js"></script>
+</html>
