@@ -632,7 +632,6 @@ function Demo(settings) {
       tool.addInput(params,"amplitude",{
           min:this.ui.amplitude2.range[0],
           max:this.ui.amplitude2.range[1],
-          step:1
       }).on("change",(ev)=>{
         this.ui.amplitude2.value = ev.value;
         this.sendEvent(this.ui.amplitude2.title, 'value changed', window.location.pathname);
