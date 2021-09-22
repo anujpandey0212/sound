@@ -43,8 +43,8 @@ var demo = new Demo({
             bottom: 60,
             left: 20
         };
-        this.width = $("#demo").width() - this.margin.left - this.margin.right-500;
-        this.height = 0.67 * $("#demo").width() - this.margin.top - this.margin.bottom-400;
+        this.width = $("#demo").width() - this.margin.left - this.margin.right-50;
+        this.height = 0.67 * $("#demo").width() - this.margin.top - this.margin.bottom-100;
         this.dataLength = this.width;
         var AudioContext = (window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.oAudioContext || window.msAudioContext);
         if (typeof AudioContext !== "undefined") {

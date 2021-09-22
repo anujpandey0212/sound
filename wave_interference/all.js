@@ -601,7 +601,7 @@ function Demo(settings) {
         zoom:this.ui.zoom.value,
         sound:this.ui.sound.value,
         overlay:this.ui.overlay.value,
-        background: '#8df',
+        background: '#ddd',
     };
     const pane = new Tweakpane.Pane()
 
@@ -611,7 +611,8 @@ function Demo(settings) {
 
       tool.addInput(params, 'f1',{
           min:this.ui.f1.range[0],
-          max:this.ui.f1.range[1]
+          max:this.ui.f1.range[1],
+          step:1
       }).on("change",(ev)=>{
         this.ui.f1.value = ev.value
         this.sendEvent(this.ui.f1.title, 'value changed', window.location.pathname);
@@ -621,6 +622,7 @@ function Demo(settings) {
       tool.addInput(params,'f2',{
           min:this.ui.f2.range[0],
           max:this.ui.f2.range[1],
+          step:1,
       }).on("change",(ev)=>{
         this.ui.f2.value = ev.value
         this.sendEvent(this.ui.f2.title, 'value changed', window.location.pathname);
@@ -629,7 +631,8 @@ function Demo(settings) {
 
       tool.addInput(params,"zoom",{
           min:this.ui.zoom.range[0],
-          max:this.ui.zoom.range[1]
+          max:this.ui.zoom.range[1],
+          step:1,
       }).on("change",(ev)=>{
           var change=ev.value-this.ui.zoom.value;
           this.ui.zoom.value=ev.value;
@@ -661,7 +664,7 @@ function Demo(settings) {
       tool.addInput(params,"background").on("change",(ev)=>{
           console.log(ev.value);
           var body=document.querySelector("body")
-          body.set
+          body.style.backgroundColor=ev.value;
       });
 
     this.addUIElement = function(prop) {

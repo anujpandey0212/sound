@@ -601,7 +601,7 @@ function Demo(settings) {
         zoom:this.ui.zoom.value,
         sound:this.ui.sound.value,
         overlay:this.ui.overlay.value,
-        background: '#8df',
+        background: '#ddd',
     };
     const pane = new Tweakpane.Pane()
 
@@ -670,7 +670,7 @@ function Demo(settings) {
       tool.addInput(params,"background").on("change",(ev)=>{
           console.log(ev.value);
           var body=document.querySelector("body")
-          body.set
+          body.style.background=ev.value;
       });
 
     // this.addUIElement = function(prop) {

@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css" class='demo-specific-styles'>
-		.grid-background {
+		.grid {
+			background: #ddd;
+			background-color: white;
 		  fill: #ddd;
 		}
 		.grid line, .axis line {
@@ -28,17 +30,23 @@
 		.axis text { 
 			font-size: 13px;
 		}
-		
+		body{
+
+			background-color:#ddd;
+		}
+		#demo{
+			width: 1000px;
+			height: 600px;
+		}
 						</style>
 		
     <title>Document</title>
 </head>
 <body>
-    <div id="demo" class=""></div>
+    <div id="demo" class="" style="background-color: #ddd;"></div>
 	<div class="clearfix" id='ui-container'>
 	</div>
 	<div class="demo-description">
-    <svg></svg>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
@@ -97,9 +105,9 @@ var demo = new Demo({
 		this.updateZoomLevel();
 		//see http://bl.ocks.org/mbostock/3019563
 		this.margin = {top: 0, right: 20, bottom: 60, left: 20};
-		this.width = $("#demo").width() - this.margin.left - this.margin.right-500;
+		this.width = $("#demo").width() - this.margin.left - this.margin.right;
 		this.dataLength = this.width;
-		this.height = 0.67* $("#demo").width() - this.margin.top - this.margin.bottom-300;
+		this.height = 0.67* $("#demo").width() - this.margin.top - this.margin.bottom-100;
 		var AudioContext = (window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.oAudioContext || window.msAudioContext);
 		if (typeof AudioContext !== "undefined") {
 		  this.audioContext = new AudioContext();
@@ -124,6 +132,7 @@ var demo = new Demo({
 					.append("svg")
 					.attr("width", this.width + this.margin.left + this.margin.right)
 					.attr("height", this.height + this.margin.top + this.margin.bottom)
+					.attr("background-color", "red")
 					.append("g")
 						.attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 		this.path1 = this.svg.append("path")
