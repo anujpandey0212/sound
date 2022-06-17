@@ -601,7 +601,7 @@ function Demo(settings) {
         zoom:this.ui.zoom.value,
         sound:this.ui.sound.value,
         overlay:this.ui.overlay.value,
-        background: '#ddd',
+        background: '#112d4c',
     };
     const pane = new Tweakpane.Pane()
 
